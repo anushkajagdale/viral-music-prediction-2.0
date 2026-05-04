@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Music Analytics Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-music logo-icon"></i>
+                <h2>ViralPro</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-target="dashboard">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-target="prediction-system">
+                    <i class="fa-solid fa-robot"></i>
+                    <span>Prediction System</span>
+                </a>
+                <a href="#" class="nav-item" data-target="predict-song">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Predict New Song</span>
+                </a>
+                <a href="#" class="nav-item" data-target="visualizations">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Visualizations</span>
+                </a>
+                <a href="#" class="nav-item" data-target="data-explorer">
+                    <i class="fa-solid fa-database"></i>
+                    <span>Data Explorer</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>Built with ❤️</p>
+                <small>© 2026 Data Science Platform</small>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header section -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1 id="page-title">Dashboard Overview</h1>
+                    <p id="page-subtitle">Professional Music Trend Analysis & Viral Prediction Platform</p>
+                </div>
+                <div class="header-actions">
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=User&background=667eea&color=fff" alt="User" class="avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard View -->
+            <section id="dashboard" class="view-section active">
+                <!-- Key Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon" style="background: rgba(102, 126, 234, 0.2); color: #667eea;">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="metric-info">
+                            <h3>Total Songs</h3>
+                            <h2>3,215</h2>
+                            <p class="text-success"><i class="fa-solid fa-arrow-up"></i> +12% this month</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon" style="background: rgba(231, 76, 60, 0.2); color: #e74c3c;">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <div class="metric-info">
+                            <h3>Viral Songs</h3>
+                            <h2>482</h2>
+                            <p>15% of dataset</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon" style="background: rgba(46, 204, 113, 0.2); color: #2ecc71;">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <div class="metric-info">
+                            <h3>Languages</h3>
+                            <h2>42</h2>
+                            <p>Global coverage</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon" style="background: rgba(241, 196, 15, 0.2); color: #f1c40f;">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <div class="metric-info">
+                            <h3>Avg Viral Score</h3>
+                            <h2>0.412</h2>
+                            <p>Normalized out of 1.0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insights Section -->
+                <div class="insights-container">
+                    <div class="insight-card">
+                        <div class="card-header">
+                            <h3>Top Performing Songs</h3>
+                            <button class="btn-icon"><i class="fa-solid fa-ellipsis"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <ul class="song-list">
+                                <li>
+                                    <div class="song-info">
+                                        <h4>Despacito</h4>
+                                        <p>Luis Fonsi • Spanish</p>
+                                    </div>
+                                    <span class="badge badge-mega-viral">MEGA VIRAL</span>
+                                </li>
+                                <li>
+                                    <div class="song-info">
+                                        <h4>Shape of You</h4>
+                                        <p>Ed Sheeran • English</p>
+                                    </div>
+                                    <span class="badge badge-mega-viral">MEGA VIRAL</span>
+                                </li>
+                                <li>
+                                    <div class="song-info">
+                                        <h4>Dynamite</h4>
+                                        <p>BTS • Korean/English</p>
+                                    </div>
+                                    <span class="badge badge-viral">VIRAL</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="card-header">
+                            <h3>Platform Distribution</h3>
+                        </div>
+                        <div class="card-body flex-center">
+                            <!-- Placeholder for chart -->
+                            <div class="chart-placeholder">
+                                <div class="bar" style="height: 20%; background: #8e44ad;"></div>
+                                <div class="bar" style="height: 40%; background: #e74c3c;"></div>
+                                <div class="bar" style="height: 70%; background: #e67e22;"></div>
+                                <div class="bar" style="height: 90%; background: #f1c40f;"></div>
+                                <div class="bar" style="height: 60%; background: #2ecc71;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prediction System View -->
+            <section id="prediction-system" class="view-section">
+                <div class="system-container">
+                    <div class="system-text">
+                        <h2>How Our AI Works</h2>
+                        <p>Our machine learning model predicts viral potential using 4 key factors:</p>
+                        
+                        <div class="factor-grid">
+                            <div class="factor-card">
+                                <div class="icon"><i class="fa-solid fa-eye"></i></div>
+                                <h4>Viral Score (40%)</h4>
+                                <p>Current views, likes, and comments performance normalized against historical data.</p>
+                            </div>
+                            <div class="factor-card">
+                                <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+                                <h4>Momentum (30%)</h4>
+                                <p>Growth velocity and engagement quality over time.</p>
+                            </div>
+                            <div class="factor-card">
+                                <div class="icon"><i class="fa-solid fa-users"></i></div>
+                                <h4>Channel Power (20%)</h4>
+                                <p>Artist popularity and historical viral success rate.</p>
+                            </div>
+                            <div class="factor-card">
+                                <div class="icon"><i class="fa-solid fa-language"></i></div>
+                                <h4>Language Trend (10%)</h4>
+                                <p>Regional music market performance and demographics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="system-stats" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                        <div class="stat-box gradient-box">
+                            <h2 id="sys-r2-score-tpot">--%</h2>
+                            <p>AutoML (R²)</p>
+                        </div>
+                        <div class="stat-box outline-box">
+                            <h2 id="sys-r2-score-static">--%</h2>
+                            <p>Static ML (R²)</p>
+                        </div>
+                        <div class="stat-box outline-box">
+                            <h2 id="sys-rmse-tpot">--</h2>
+                            <p>AutoML RMSE</p>
+                        </div>
+                        <div class="stat-box outline-box">
+                            <h2 id="sys-rmse-static">--</h2>
+                            <p>Static ML RMSE</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Predict New Song View -->
+            <section id="predict-song" class="view-section">
+                <div class="predict-container">
+                    <div class="form-card">
+                        <h3>🔮 Predict Virality</h3>
+                        <p>Enter song performance data to get an AI prediction.</p>
+                        
+                        <div class="mode-toggle">
+                            <label><input type="radio" name="pred-mode" value="manual" checked> Manual Entry</label>
+                            <label><input type="radio" name="pred-mode" value="auto"> Automatic (URL/DB)</label>
+                        </div>
+                        
+                        <!-- Manual Form -->
+                        <form id="predict-form-manual" class="predict-form">
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="song-title">Song Title</label>
+                                    <input type="text" id="song-title" placeholder="e.g. Midnight City" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="artist-name">Artist/Channel</label>
+                                    <input type="text" id="artist-name" placeholder="e.g. M83" required>
+                                </div>
+                            </div>
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="current-views">Current Views</label>
+                                    <input type="number" id="current-views" value="150000" min="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="current-likes">Current Likes</label>
+                                    <input type="number" id="current-likes" value="12000" min="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="current-comments">Current Comments</label>
+                                    <input type="number" id="current-comments" value="850" min="0" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="days-old">Days Since Release</label>
+                                <input type="number" id="days-old" value="7" min="1" required>
+                            </div>
+                            <button type="submit" class="btn-primary" id="predict-btn-manual">
+                                <i class="fa-solid fa-microchip"></i> Run AI Model
+                            </button>
+                        </form>
+
+                        <!-- Auto Form -->
+                        <form id="predict-form-auto" class="predict-form" style="display:none;">
+                            <div class="form-group">
+                                <label>Fetch Method</label>
+                                <select id="auto-method" class="form-select">
+                                    <option value="db">Select from Database</option>
+                                    <option value="url">Enter YouTube URL (Live Fetch)</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="db-select-group">
+                                <label>Choose a Song</label>
+                                <select id="db-song-select" class="form-select">
+                                    <option value="">Loading songs...</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="url-input-group" style="display:none;">
+                                <label>YouTube URL</label>
+                                <input type="text" id="youtube-url" placeholder="https://youtube.com/watch?v=...">
+                            </div>
+                            <button type="submit" class="btn-primary" id="predict-btn-auto">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-Predict Virality!
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Result Area (Hidden by default) -->
+                    <div class="result-card" id="result-card" style="display: none;">
+                        <div class="loader" id="loader">
+                            <div class="spinner"></div>
+                            <p>Running TPOT AutoML Pipeline...</p>
+                        </div>
+                        
+                        <div class="prediction-output" id="prediction-output" style="display: none;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                                <!-- TPOT Column -->
+                                <div id="col-tpot" style="transition: all 0.3s;">
+                                    <div id="badge-tpot"></div>
+                                    <div class="result-banner" id="result-banner-tpot">
+                                        <h1 id="result-emoji-tpot">🔥</h1>
+                                        <h2 id="result-text-tpot">Will Go MEGA VIRAL</h2>
+                                        <p>Virality Index: <span id="result-index-tpot">0.8543</span></p>
+                                        <div style="margin-top: 15px; font-size: 12px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 8px; display: inline-block;">
+                                            <i class="fa-solid fa-robot"></i> <strong>TPOT AutoML</strong>: <em id="model-name-display-tpot">Loading...</em>
+                                        </div>
+                                    </div>
+                                    <div class="result-details" style="margin-top: 15px;">
+                                        <div class="detail-item">
+                                            <span>Viral Score</span>
+                                            <strong id="det-viral-score-tpot">0.85</strong>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span>Momentum</span>
+                                            <strong id="det-momentum-tpot">0.92</strong>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span>Engagement Rate</span>
+                                            <strong id="det-engagement-tpot">8.5%</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Static Column -->
+                                <div id="col-static" style="transition: all 0.3s;">
+                                    <div id="badge-static"></div>
+                                    <div class="result-banner" id="result-banner-static" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                                        <h1 id="result-emoji-static">🔥</h1>
+                                        <h2 id="result-text-static">Will Go MEGA VIRAL</h2>
+                                        <p>Virality Index: <span id="result-index-static">0.8543</span></p>
+                                        <div style="margin-top: 15px; font-size: 12px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 8px; display: inline-block;">
+                                            <i class="fa-solid fa-microchip"></i> <strong>Static ML</strong>: <em id="model-name-display-static">Loading...</em>
+                                        </div>
+                                    </div>
+                                    <div class="result-details" style="margin-top: 15px;">
+                                        <div class="detail-item">
+                                            <span>Viral Score</span>
+                                            <strong id="det-viral-score-static">0.85</strong>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span>Momentum</span>
+                                            <strong id="det-momentum-static">0.92</strong>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span>Engagement Rate</span>
+                                            <strong id="det-engagement-static">8.5%</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="powerbi-mock">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                    <div>
+                                        <h4>📊 Comparison vs Industry Avg</h4>
+                                        <div class="bar-chart-mock">
+                                            <div class="bar-group">
+                                                <span class="bar-label">Views</span>
+                                                <div class="bar-track" title="This Song"><div class="bar-fill" id="bar-v-song" style="width: 0%; background: #3498db;"></div></div>
+                                                <div class="bar-track" title="Average"><div class="bar-fill" style="width: 15%; background: rgba(255,255,255,0.2);"></div></div>
+                                            </div>
+                                            <div class="bar-group">
+                                                <span class="bar-label">Likes</span>
+                                                <div class="bar-track" title="This Song"><div class="bar-fill" id="bar-l-song" style="width: 0%; background: #e74c3c;"></div></div>
+                                                <div class="bar-track" title="Average"><div class="bar-fill" style="width: 12%; background: rgba(255,255,255,0.2);"></div></div>
+                                            </div>
+                                            <div class="bar-group">
+                                                <span class="bar-label">Comments</span>
+                                                <div class="bar-track" title="This Song"><div class="bar-fill" id="bar-c-song" style="width: 0%; background: #f1c40f;"></div></div>
+                                                <div class="bar-track" title="Average"><div class="bar-fill" style="width: 8%; background: rgba(255,255,255,0.2);"></div></div>
+                                            </div>
+                                            <div class="bar-legend">
+                                                <span><span class="legend-color" style="background: #3498db;"></span>This Song</span>
+                                                <span><span class="legend-color" style="background: rgba(255,255,255,0.2);"></span>Average</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4>📈 Predictive Trajectory</h4>
+                                        <div class="growth-chart">
+                                            <div class="growth-line"></div>
+                                            <div class="growth-point p1" data-label="Day 1"></div>
+                                            <div class="growth-point p2" data-label="Day 7"></div>
+                                            <div class="growth-point p3" data-label="Day 30"></div>
+                                            <div class="growth-point p4" data-label="Day 60"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visualizations View -->
+            <section id="visualizations" class="view-section">
+                <div class="viz-header">
+                    <h2>Complete Analysis Visualizations</h2>
+                    <div class="viz-tabs">
+                        <button class="viz-tab active" data-viz="eda">EDA Analysis</button>
+                        <button class="viz-tab" data-viz="fe">Feature Engineering</button>
+                        <button class="viz-tab" data-viz="stat">Statistical Analysis</button>
+                        <button class="viz-tab" data-viz="ts">Time Series</button>
+                        <button class="viz-tab" data-viz="dash">Final Dashboard</button>
+                    </div>
+                </div>
+                
+                <div class="viz-content active" id="viz-eda">
+                    <div class="img-card"><img src="outputs/eda/3a_histograms.png" alt="Distributions"><p>Data Distributions</p></div>
+                    <div class="img-card"><img src="outputs/eda/3e_heatmap_full.png" alt="Correlation Heatmap"><p>Correlation Heatmap</p></div>
+                </div>
+                <div class="viz-content" id="viz-fe">
+                    <div class="img-card"><img src="outputs/feature_engineering/4a_viral_score_dist.png" alt="Viral Score Dist"><p>Viral Score Distribution</p></div>
+                    <div class="img-card"><img src="outputs/feature_engineering/4b_virality_prediction.png" alt="Virality Prediction"><p>Virality Prediction</p></div>
+                </div>
+                <div class="viz-content" id="viz-stat">
+                    <div class="img-card"><img src="outputs/statistical_analysis/5a_viral_score_dist.png" alt="Viral Score Stats"><p>Viral Score Statistics</p></div>
+                    <div class="img-card"><img src="outputs/statistical_analysis/5c_hypothesis_testing.png" alt="Hypothesis Testing"><p>Hypothesis Testing (T-Test)</p></div>
+                </div>
+                <div class="viz-content" id="viz-ts">
+                    <div class="img-card"><img src="outputs/time_series/6b_time_series.png" alt="Trends"><p>Time Series Trends</p></div>
+                    <div class="img-card"><img src="outputs/time_series/6g_forecast.png" alt="Forecast"><p>Future Forecast Analysis</p></div>
+                </div>
+                <div class="viz-content" id="viz-dash">
+                    <div class="img-card"><img src="outputs/visualizations/7a_monthly_views.png" alt="Monthly Views"><p>Monthly Views Trend</p></div>
+                    <div class="img-card"><img src="outputs/visualizations/7b_weekly_viral.png" alt="Weekly Viral"><p>Weekly Viral Songs Trend</p></div>
+                </div>
+            </section>
+            
+            <!-- Data Explorer View -->
+            <section id="data-explorer" class="view-section">
+                <div class="explorer-header">
+                    <h2>Interactive Data Explorer</h2>
+                    <div class="filters">
+                        <select id="filter-lang" class="form-select"><option value="all">All Languages</option></select>
+                        <select id="filter-pred" class="form-select"><option value="all">All Predictions</option></select>
+                        <input type="number" id="filter-views" placeholder="Min Views" class="form-select">
+                        <button id="btn-export" class="btn-secondary"><i class="fa-solid fa-download"></i> Export</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Channel</th>
+                                <th>Language</th>
+                                <th>Views</th>
+                                <th>Viral Score</th>
+                                <th>Prediction</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-table-body">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
