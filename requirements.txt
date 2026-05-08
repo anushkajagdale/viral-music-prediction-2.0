@@ -1,3 +1,5 @@
+flask
+gunicorn
 pandas
 numpy
 matplotlib
@@ -8,4 +10,5 @@ scikit-learn
 requests
 google-api-python-client
 streamlit
-gunicorn
+joblib
+yt-dlp
