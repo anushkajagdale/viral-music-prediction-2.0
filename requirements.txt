@@ -13,3 +13,4 @@ streamlit
 joblib
 yt-dlp
 tpot
+setuptools
