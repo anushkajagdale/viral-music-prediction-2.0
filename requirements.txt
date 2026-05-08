@@ -6,9 +6,10 @@ matplotlib
 seaborn
 scipy
 statsmodels
-scikit-learn
+scikit-learn==1.7.2
 requests
 google-api-python-client
 streamlit
 joblib
 yt-dlp
+tpot
