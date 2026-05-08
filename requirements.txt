@@ -8,3 +8,4 @@ scikit-learn
 requests
 google-api-python-client
 streamlit
+gunicorn
